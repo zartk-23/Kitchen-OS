@@ -1,0 +1,32 @@
+# KitchenOS Enhancement Checklist
+
+- [x] Design the waitlist capture journey and validation states.
+- [x] Add inventory management and menu intelligence narrative sections.
+- [x] Add scroll-reveal and hover interactions while preserving the Quiet Shift visual system.
+- [x] Verify desktop and mobile behavior, then save the completed update.
+- [~] Publishing/domain setup deferred by the user; revisit only when the user opts back in.
+- [x] Inventory the current static application’s runtime, dependency, and deployment security surface.
+- [x] Apply applicable client-side hardening without altering the existing design or flow.
+- [x] Run dependency, type, build, and security-regression checks; record non-applicable backend controls as remaining risks.
+- [x] Review the supplied KitchenOS specification and define the authenticated product scope.
+- [x] Upgrade the project with secure user management, database storage, and backend API capabilities.
+- [x] Implement persistent validated waitlist submissions and authenticated dashboard access.
+- [x] Build the dashboard preview, interactive product tour, and swarm-style collaboration workspace.
+- [x] Validate access control, API behavior, and responsive product flows before delivery.
+- [x] Add explicit server tests for unauthenticated protected-procedure rejection and tenant-scoped workspace reads.
+- [x] Verify signed-out and signed-in protected workspace behavior in the running application without creating test tenant data.
+- [~] External OAuth sign-in confirmation deferred until the user has account access available.
+- [x] Inspect and resolve the reported swarm or error-count indicator in the current application experience.
+- [x] Implement a secure email-and-password test authentication fallback without weakening OAuth or session protection.
+- [x] Add tenant-scoped recipe creation and procurement workflows to the authenticated KitchenOS dashboard.
+- [x] Test fallback login, recipes, procurement actions, and dashboard error behavior across desktop and mobile.
+- [x] Add explicit server-side abuse throttling for local registration and password login attempts.
+- [~] Exercise live local login and tenant workflow mutation success paths when a user chooses to create non-test workspace data.
+- [~] Reported left-side counter was not present after restart or in refreshed app screenshots; request a user screenshot if it persists outside the app preview.
+- [x] Review the recipe workflow and approved AI/storage integration patterns before extending it.
+- [x] Add secure AI-assisted ingredient parsing with user review before recipe persistence.
+- [x] Add tenant-scoped recipe photo uploads using managed object storage.
+- [x] Validate the enhanced recipe workflow and document Render deployment prerequisites and limitations.
+- [~] Verify the authenticated parse, recipe save, and photo-upload sequence when the user chooses to use their real workspace data; no test records were retained.
+- [x] Add in-project Render deployment guidance covering environment, database, storage, and authentication requirements.
+- [x] Re-run final regression checks after the deployment documentation and implemented parser/photo-flow updates.

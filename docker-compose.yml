@@ -1,0 +1,23 @@
+# Local MySQL for KitchenOS development. Start with: docker compose up -d
+services:
+  db:
+    image: mysql:8.4
+    container_name: kitchenos-mysql
+    restart: unless-stopped
+    environment:
+      MYSQL_ROOT_PASSWORD: kitchenos-root
+      MYSQL_DATABASE: kitchenos
+      MYSQL_USER: kitchenos
+      MYSQL_PASSWORD: kitchenos
+    ports:
+      - "3306:3306"
+    volumes:
+      - kitchenos-mysql-data:/var/lib/mysql
+    healthcheck:
+      test: ["CMD", "mysqladmin", "ping", "-h", "127.0.0.1", "-ukitchenos", "-pkitchenos"]
+      interval: 5s
+      timeout: 5s
+      retries: 30
+
+volumes:
+  kitchenos-mysql-data:
